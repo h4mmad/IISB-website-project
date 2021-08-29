@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f3f3f3;
+    
+}
+
+/*body::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00,#f0f);
+    clip-path: circle(30% at right 70%);
+}*/
+
+/*body::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#2196f3,#e91e63);
+    clip-path: circle(20% at 10% 10%);
+}*/
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.container .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px ;
+    background: rgba(255,255,255,0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+}
+
+.container .card .content{
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.container .card .content  h2{
+    position: absolute;
+    top: -30px;
+    right: 30px;
+    font-size: 8em;
+    color: #143C57;
+    pointer-events: none;
+}
+
+.container .card .content h3{
+    font-size: 1.3em;
+    font-family: 'Poppins', sans-serif;
+    font-weight:  400;
+    color: #143C57;
+    z-index: 1;
+}
+
+.container .card .content p{
+    font-family: 'Roboto Slab', serif;
+    font-size: 0.9em;
+    color: #143C57;
+    font-weight: 300;
+}
+
+.container .card .content a{
+    position: relative;
+    display: inline-block;
+    padding: 7px 20px;
+    margin-top: 15px;
+    background: #143C57;
+    color: white;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 0.8em;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.container .card .content img{
+    border-radius: 15px;
+    height: 170px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+
+
+  
+  /* Create four equal columns that sits next to each other */
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex: 33.3%;
+    max-width: 33.3%;
+  }
+
+  .row-leader{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+
+  @media screen and (max-width: 800px) {
+    .row-leader{
+        display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      }
+  }
+  @media screen and (max-width: 600px) {
+    .row-leader{
+        display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      }
+  }
+  
+  
+/*the two rows stack on top of each other (they become a column) instead of next to each other */
+@media screen and (max-width: 800px) {
+    .row {
+      flex: 100%;
+      max-width: 100%;
+      flex-direction: column;
+    }
+  }
+  
+/*the two rows stack on top of each other (they become a column) instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .row {
+      flex: 100%;
+      flex-direction: column;
+      max-width: 100%;
+    }
+  }
